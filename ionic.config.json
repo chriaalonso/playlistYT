@@ -1,0 +1,7 @@
+{
+  "name": "playlistYoutube",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
