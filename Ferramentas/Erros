@@ -1,0 +1,26 @@
+export youtubevideoplayeroriginal <imported as 'youtubevideoplayeroriginal'> was not found in '@ionic-native/youtube-video-player <possible exports: YoutubeVideoPlayer>
+
+
+npm uninstall --save @capacitor/android
+
+
+
+
+config '--global', '--local' are deprecated. use '--location=global' instead
+
+
+
+
+
+export youtubevideoplayeroriginal <imported as 'youtubevideoplayeroriginal'> was not found in '@ionic-native/youtube-video-player <possible exports: YoutubeVideoPlayer>
+
+
+
+
+Se você estiver usando o Cordova versão 7.0.0 ou posterior, faça o downgrade para o Cordova versão 6.5.0 para que o plug-in funcione. A estrutura de diretório criada pela versão mais recente é diferente da mais antiga e o plug-in não foi atualizado de acordo para acomodá-lo e é por isso que você recebe esse erro. Após o downgrade, remova e adicione a plataforma Android novamente e também remova outros plugins, pois eles podem não funcionar com a versão mais antiga e adicione-os novamente em seu projeto
+
+
+
+
+
+plugin YoutubeVideoPayer  is not assignable to type Provider

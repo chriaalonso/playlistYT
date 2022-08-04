@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-title>
-      Blank
+      Playlist
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label stacked>Channel ID</ion-label>
+    <ion-input type="text" [(ngModel)]="channelId"></ion-input>
+  </ion-item>
+  <button full ion-button (click)="searchPlaylists()" [disabled]="channelId === ''" color="danger">Search Playlists</button>
+ 
+  <ion-list no-padding>
+    <button ion-item *ngFor="let list of playlists | async" (click)="openPlaylist(list.id)">
+      <ion-thumbnail item-start>
+      <img [src]="list.snippet.thumbnails.standard.url">
+    </ion-thumbnail>
+    <h2>{{ list.snippet.title }}</h2>
+    <p>{{ list.snippet.publishedAt | date:'short' }}</p>
+    </button>
+  </ion-list>
+
 </ion-content>

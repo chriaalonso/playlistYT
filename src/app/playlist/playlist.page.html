@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Playlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let video of videos | async" (click)="openVideo(video)">
+      <ion-thumbnail item-start>
+        <img [src]="video.snippet.thumbnails.standard.url">
+      </ion-thumbnail>
+      <p>{{ video.snippet.description }}</p>
+    </button>
+  </ion-list>
+</ion-content>
